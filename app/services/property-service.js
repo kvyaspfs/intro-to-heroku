@@ -9,6 +9,7 @@ import 'rxjs/Rx';
 let prettifyProperty = (property) => {
     let prettyProperty = {
         id: property.sfid,
+		name:property.name,
         title: property.title__c,
         city: property.city__c,
         state: property.state__c,
