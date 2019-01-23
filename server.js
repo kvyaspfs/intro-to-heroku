@@ -88,8 +88,14 @@ app.get('/broker/:sfid', function(req, res) {
   });
 });
 
-var port = process.env.PORT || 8200;
+//var port = process.env.PORT || 8200;
 
-app.listen(port);
+//app.listen(port);
+
+console.log(process.env.PORT);
+
+app.listen(process.env.PORT || 8200, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
 //console.log('Listening at: http://localhost:' + port);
